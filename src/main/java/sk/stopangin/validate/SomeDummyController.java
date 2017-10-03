@@ -16,8 +16,11 @@ public class SomeDummyController {
     SomeDummyService someDummyService;
 
     @RequestMapping(value="do",method = RequestMethod.GET)
-    public void doSOmething(@RequestParam(value="data")String data){
-        someDummyService.doSomething(data);
+    public void doSOmething(@RequestParam(value="d1")String d1,@RequestParam(value="d2")String d2){
+        Dummy d = new Dummy();
+        d.setD1(d1);
+        d.setD2(d2);
+        someDummyService.doSomething(d);
     }
 
 }
