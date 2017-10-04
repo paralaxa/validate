@@ -17,9 +17,7 @@ public class SomeDummyController {
 
     @RequestMapping(value="do",method = RequestMethod.GET)
     public void doSOmething(@RequestParam(value="d1")String d1,@RequestParam(value="d2")String d2){
-        Dummy d = new Dummy();
-        d.setD1(d1);
-        d.setD2(d2);
+        Dummy d = Dummy.builder().d1(d1).d2(d2).build();
         someDummyService.doSomething(d);
     }
 
