@@ -1,6 +1,7 @@
 package sk.stopangin.validate;
 
 import lombok.Builder;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -9,6 +10,7 @@ import javax.validation.constraints.Size;
  * Created by stopangin on 10/3/2017.
  */
 @Builder
+@Data
 public class Dummy {
     @NotNull
     private String d1;
