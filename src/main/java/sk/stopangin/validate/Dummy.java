@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 @Builder
 @Data
 public class Dummy {
-    @MyValidation
+    @MyValidation("a")
     private String d1;
 
     @Size(min = 2)

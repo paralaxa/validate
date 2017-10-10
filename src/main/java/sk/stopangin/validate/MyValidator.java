@@ -14,7 +14,7 @@ public class MyValidator implements ConstraintValidator<MyValidation, String> {
         if (s.equals("a")) {
             return true;
         }
-        cvc.buildConstraintViolationWithTemplate("myValidatorMessage")
+        cvc.buildConstraintViolationWithTemplate("${validatedValue} is not {value}")
                 .addConstraintViolation().disableDefaultConstraintViolation();
         return false;
     }
